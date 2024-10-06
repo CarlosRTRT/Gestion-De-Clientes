@@ -1,4 +1,4 @@
--- Active: 1699851356360@@127.0.0.2@3036
+-- Active: 1703997315754@@127.0.0.1@3306
 
 
 CREATE DATABASE IF NOT EXISTS clientsbakery;
@@ -7,7 +7,7 @@ CREATE DATABASE IF NOT EXISTS clientsbakery;
 USE clientsbakery;
 
 -- Crear una tabla con un campo de ID incrementable
-CREATE TABLE clientsbakery (
+CREATE TABLE IF NOT EXISTS clientsbakery (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255),
     apellido1 VARCHAR(255),
@@ -17,7 +17,7 @@ CREATE TABLE clientsbakery (
     pagado NUMERIC
 );
 
-INSERT INTO clientsbakery(nombre, apellido1, apellido2, telefono, deuda, pagado ) VALUES ("carla", "Rodriguez", "Chavez", 61849041, 10000, 5000);
+
 SELECT * FROM clientsbakery;
 
 

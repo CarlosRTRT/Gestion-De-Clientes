@@ -1,4 +1,7 @@
 import {pool} from '../databaseConnection.js'
+import express from 'express'
+
+
 
 export const getAllClients = async(req, res) =>{
     try{
@@ -25,11 +28,19 @@ export const getClient = async(req, res)=>{
         console.log("error getting client data");
     }
 }
-export const createdClient = (req,res) => {
+export const createdClient = async(req,res) => {
 
     let data = req.body;
 
-    console.log(data)
+    let name = data.nom;
+    let lastname = data.apelli1;
+    let secondname = data.apelli2;
+    let phone = data.tel;
+    let deuda = data.deuda
+
+    const [dat] = await pool.query('INSERT INTO clientsbakery(nombre, apellido1, apellido2, telefono, deuda) VALUES (?,?,?,?,?)', [name,lastname,secondname,phone,deuda])
+    res.redirect('/clienteCreado')
+
 } 
 
 export const deleteClient = async(req, res)=>{

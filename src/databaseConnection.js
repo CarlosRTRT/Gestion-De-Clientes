@@ -8,4 +8,4 @@ export const pool = createPool({
     database: process.env.DB_DATABASE,
 });
 
-// export async function query(sql: string) {  
+ 

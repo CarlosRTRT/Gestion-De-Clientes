@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createClient.css">
     <title>Document</title>
 </head>
 <body>
-        <form action="/newClient" method="post">
+    <div id="container1">
+        <div id="container2">
+            <form action="app/newClient" method="post" id="form">
 
-            Nombre:
-            <input type="text" name="nom" id="nom">
+                Nombre:
+                <input type="text" name="nom" id="nom" class="int" placeholder="Nombre">
 
-            <input type="submit" value="registrar">
+                Primer Apellido:
+                <input type="text" name="apelli1" id="apelli1" class="int" placeholder="Primer Apellido">
+
+                Segundo Apellido:
+                <input type="text" name="apelli2" id="apelli2" class="int" placeholder="Segundo Apellido">
+
+                Telefono:
+                <input type="number" name="tel" id="tel" class="int"placeholder="Numero De Telefono" min="0">
+
+                Deuda:
+                <input type="number" name="deuda" id="deuda" class="int" placeholder="Deuda">
+
+                <input type="submit" value="registrar" id="submit">
             
-        </form>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

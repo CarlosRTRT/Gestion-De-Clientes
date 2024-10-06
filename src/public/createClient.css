@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-garabatos-panaderia_125540-632.jpg?w=2000);
+    background-size: cover;
+}
+#container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    background-color: rgba(2, 2, 2, .5);
+    border-style: solid;
+    border-radius: 1rem;
+}
+#form{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: .1rem;
+    font-size: 1.5rem;
+    color: white;
+}
+.int{
+    width: 75%;
+    height: 1.5rem;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+}
+.int::placeholder{
+    text-align: center;
+}
+
+#submit{
+    width: 6rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    background-color: rgb(73, 73, 182);
+    border-style: solid;
+    border-radius: 10px;
+}
