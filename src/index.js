@@ -23,7 +23,6 @@ app.use(express.static(join(__dirname, './public')))
 
 
 app.listen(process.env.PORT)
-app.use(express.json())
 
 app.use('/app', routes)
 

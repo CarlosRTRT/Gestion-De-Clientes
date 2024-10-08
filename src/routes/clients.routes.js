@@ -13,5 +13,5 @@ router.post('/newClient', createdClient )
 
 router.delete('/deleteClient/:id', deleteClient)
 
-
+console.log("Client routes loaded");
 export default router

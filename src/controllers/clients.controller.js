@@ -47,7 +47,7 @@ export const deleteClient = async(req, res)=>{
     let id = req.params.id;
     try{
     
-        const [deleted] = await pool.query("DELETE * FROM clientsbakery WHERE id = ?", [id])
+        const [deleted] = await pool.query('DELETE FROM clientsbakery WHERE id = ?', [id])
 
         res.json({
 
@@ -62,7 +62,8 @@ export const deleteClient = async(req, res)=>{
     
 }
 export const updateClient = async(req, res)=> {
-    let id = req.params.id;
+    console.log("Request received at /clientUpdate/:id");
+    const id = req.params.id;
     let {nombre, apellido1, apellido2, telefono, deuda, pagado} = req.body;
 
     try{
